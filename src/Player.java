@@ -92,12 +92,12 @@ public class Player {
         } else if (getMyHandValue() >= 16 && getMyHandValue() <= 20) {
             status = determineActionToApply(Constant.sixteenToTwenty);
             setPlayerStatus(status);
-        } else if (getMyHandValue() > 21){
+        } else if (getMyHandValue() > 21) {
             setStatus(Status.GO_BUST);
         }
     }
 
-    private void setPlayerStatus(String status){
+    private void setPlayerStatus(String status) {
         if ("hit".equals(status)) {
             setStatus(Status.HIT);
         } else {

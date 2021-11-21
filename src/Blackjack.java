@@ -58,7 +58,7 @@ public class Blackjack {
         });
     }
 
-    private static void removeBustPlayersFromGame(List<Player> playerList, Dealer dealer) {
+    public static void removeBustPlayersFromGame(List<Player> playerList, Dealer dealer) {
         playerList.removeAll(dealer.IdentifyBustPlayers(playerList));
 
     }
@@ -88,7 +88,7 @@ public class Blackjack {
         ;
     }
 
-    private static void addPlayersToGame(int numPlayers, List<Player> list) {
+    public static void addPlayersToGame(int numPlayers, List<Player> list) {
         for (int i = 0; i < numPlayers; i++) {
             list.add(new Player(String.format("Player%d", i), new Stack<>()));
         }
