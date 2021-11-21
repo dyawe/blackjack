@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Stack;
 import java.util.stream.Stream;
 
@@ -19,7 +17,7 @@ public class Deck {
         Collections.shuffle(deck);
     }
 
-    public Stack<Card> createDeck() {
+    public void createDeck() {
         clearDeck();
 
         Stream.of(Suit.values()).forEach(suit -> {
@@ -28,7 +26,6 @@ public class Deck {
             });
         });
         shuffle();
-        return deck;
     }
 
 
