@@ -28,7 +28,6 @@ public class Dealer {
     }
 
     public void dealCards(List<Player> players) {
-//        players.stream().forEach(player -> player.setMyHand(deck.pop()));
         players.forEach(player -> {
             if (player.getMyHand().isEmpty()) {
                 player.setMyHand(dealerDeck.deck.pop());

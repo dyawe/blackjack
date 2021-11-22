@@ -70,7 +70,9 @@ public class Blackjack {
     private static int takeNumPlayersFromUser() {
         printMessage("Welcome to Blackjack World\nPlease enter the number of players");
         Scanner sc = new Scanner(System.in);
-        return sc.nextLine().isEmpty() ? 3 : sc.nextInt();
+        var input = sc.nextInt();
+        return sc.nextLine().isEmpty() ? 3 : input;
+
     }
 
     private static int takeShufflingMethodFromUser() {
